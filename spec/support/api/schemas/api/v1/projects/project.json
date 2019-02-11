@@ -1,0 +1,41 @@
+{ 
+    "id": "file:/project.json#",
+    "type": "object",
+    "required": ["id", "type", "attributes", "relationships", "links"],
+    "properties": {
+      "id": { "type": "string" },
+      "type": { "type": "string" },
+      "attributes": { "name": { "type": "string" } },
+      "relationships": {
+        "type": "object",
+        "required": ["user", "tasks"],
+        "properties": {
+          "user": {
+            "type": "object",
+            "required": ["data"],
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": ["id", "type"],
+                "properties": {
+                  "id": { "type": "string" },
+                  "type": { "type": "string" }
+                }
+              }
+            }
+          },
+          "tasks": {
+            "type": "object",
+            "required": ["data"],
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": { "$ref": "file:/task_array.json#" }
+              }
+            }
+          }
+        }
+      },
+      "links": { "self": { "type": "string" } }
+    }
+  }
