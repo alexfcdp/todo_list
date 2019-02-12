@@ -9,6 +9,7 @@ class Api::V1::CommentsController < ApplicationController
   resource_description do
     formats ['json']
     error 401, 'Unauthorized'
+    error 404, 'Not Found'
     error 422, 'Validation Error'
     error 500, 'Internal Server Error'
   end
@@ -32,8 +33,8 @@ class Api::V1::CommentsController < ApplicationController
   api :POST, '/v1/tasks/:task_id/comments', 'Creates a Comment'
   param_group :comment
   def create
-    @comment = Comment.new(comment_params)
-    if @comment.save
+    @comment = @task.comments.create(comment_params)
+    if @comment.errors.blank?
       render json: @comment, status: :created
     else
       render json: { error: @comment.errors }, status: :unprocessable_entity
@@ -50,8 +51,6 @@ class Api::V1::CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:data).require(:attributes).permit(:commentary, :image).tap do |whitelisted|
-      whitelisted[:task_id] = params[:task_id]
-    end
+    params.require(:data).require(:attributes).permit(:commentary, :image)
   end
 end

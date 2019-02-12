@@ -7,6 +7,7 @@ class Api::V1::ProjectsController < ApplicationController
   resource_description do
     formats ['json']
     error 401, 'Unauthorized'
+    error 404, 'Not Found'
     error 422, 'Validation Error'
     error 500, 'Internal Server Error'
   end
@@ -42,6 +43,7 @@ class Api::V1::ProjectsController < ApplicationController
   end
 
   api :PATCH, '/v1/projects/:id', 'Updates the Project'
+  param :id, :number, required: true
   param_group :project
   def update
     if @project.update(project_params)

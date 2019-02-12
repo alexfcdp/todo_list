@@ -2,3 +2,5 @@ en:
    errors:
     file_size: 'Images should be less than '
     file_content: 'Images only allows jpeg and png'
+   exception:
+     record_not_found: 'Not Found'
