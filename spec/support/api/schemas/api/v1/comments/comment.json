@@ -1,0 +1,34 @@
+{ 
+  "id": "file:/comment.json#",
+  "type": "object",
+  "required": ["id", "type", "attributes", "relationships", "links"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string" },
+    "attributes": { 
+        "commentary": { "type": "string" },
+        "image": { "type": "string" }
+    },
+    "relationships": {
+      "type": "object",
+      "required": ["task"],
+      "properties": {
+        "task": {
+          "type": "object",
+          "required": ["data"],
+          "properties": {
+            "data": {
+              "type": "object",
+              "required": ["id", "type"],
+              "properties": {
+                "id": { "type": "string" },
+                "type": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "links": { "self": { "type": "string" } }
+  }
+}

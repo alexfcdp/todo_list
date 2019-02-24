@@ -1,0 +1,537 @@
+{
+  "comments#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/tasks/2/comments",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "data[attributes][commentary]=Alias+dolore+dicta+sequi+sapiente+repudiandae+quisquam+illo.",
+      "response_data": {
+        "data": {
+          "id": "3",
+          "type": "comments",
+          "attributes": {
+            "commentary": "Alias dolore dicta sequi sapiente repudiandae quisquam illo.",
+            "image": null
+          },
+          "relationships": {
+            "task": {
+              "data": {
+                "id": "2",
+                "type": "tasks"
+              }
+            }
+          },
+          "links": {
+            "self": "http://localhost:3000/api/v1/comments/3"
+          }
+        }
+      },
+      "code": 201,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "comments#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/api/v1/comments/4",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": null,
+      "code": 204,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "comments#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/tasks/1/comments",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "1",
+            "type": "comments",
+            "attributes": {
+              "commentary": "Nihil reprehenderit voluptatum labore alias error omnis.",
+              "image": null
+            },
+            "relationships": {
+              "task": {
+                "data": {
+                  "id": "1",
+                  "type": "tasks"
+                }
+              }
+            },
+            "links": {
+              "self": "http://localhost:3000/api/v1/comments/1"
+            }
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "data[attributes][name]=Assistant+Manager",
+      "response_data": {
+        "data": {
+          "id": "7",
+          "type": "projects",
+          "attributes": {
+            "name": "Assistant Manager"
+          },
+          "relationships": {
+            "user": {
+              "data": {
+                "id": "6",
+                "type": "users"
+              }
+            },
+            "tasks": {
+              "data": [
+
+              ]
+            }
+          },
+          "links": {
+            "self": "http://localhost:3000/api/v1/projects/7"
+          }
+        }
+      },
+      "code": 201,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/api/v1/projects/9",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": null,
+      "code": 204,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "4",
+            "type": "projects",
+            "attributes": {
+              "name": "New Project_4"
+            },
+            "relationships": {
+              "user": {
+                "data": {
+                  "id": "4",
+                  "type": "users"
+                }
+              },
+              "tasks": {
+                "data": [
+
+                ]
+              }
+            },
+            "links": {
+              "self": "http://localhost:3000/api/v1/projects/4"
+            }
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects/5",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": {
+          "id": "5",
+          "type": "projects",
+          "attributes": {
+            "name": "New Project_5"
+          },
+          "relationships": {
+            "user": {
+              "data": {
+                "id": "5",
+                "type": "users"
+              }
+            },
+            "tasks": {
+              "data": [
+
+              ]
+            }
+          },
+          "links": {
+            "self": "http://localhost:3000/api/v1/projects/5"
+          }
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#update": [
+    {
+      "verb": "PATCH",
+      "path": "/api/v1/projects/8",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "data[attributes][name]=Executive+Secretary",
+      "response_data": {
+        "data": {
+          "id": "8",
+          "type": "projects",
+          "attributes": {
+            "name": "Executive Secretary"
+          },
+          "relationships": {
+            "user": {
+              "data": {
+                "id": "7",
+                "type": "users"
+              }
+            },
+            "tasks": {
+              "data": [
+
+              ]
+            }
+          },
+          "links": {
+            "self": "http://localhost:3000/api/v1/projects/8"
+          }
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#complete": [
+    {
+      "verb": "PATCH",
+      "path": "/api/v1/tasks/10/complete",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": {
+          "id": "10",
+          "type": "tasks",
+          "attributes": {
+            "name": "Voluptas non fugiat id iste magni nihil et.",
+            "position": 1,
+            "done": true,
+            "deadline": null,
+            "comments-count": 0
+          },
+          "relationships": {
+            "project": {
+              "data": {
+                "id": "15",
+                "type": "projects"
+              }
+            },
+            "comments": {
+              "data": [
+
+              ]
+            }
+          },
+          "links": {
+            "self": "http://localhost:3000/api/v1/tasks/10"
+          }
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/12/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "data[attributes][name]=Bootstrap",
+      "response_data": {
+        "data": {
+          "id": "7",
+          "type": "tasks",
+          "attributes": {
+            "name": "Bootstrap",
+            "position": 2,
+            "done": false,
+            "deadline": null,
+            "comments-count": 0
+          },
+          "relationships": {
+            "project": {
+              "data": {
+                "id": "12",
+                "type": "projects"
+              }
+            },
+            "comments": {
+              "data": [
+
+              ]
+            }
+          },
+          "links": {
+            "self": "http://localhost:3000/api/v1/tasks/7"
+          }
+        }
+      },
+      "code": 201,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/api/v1/tasks/9",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": null,
+      "code": 204,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects/10/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "4",
+            "type": "tasks",
+            "attributes": {
+              "name": "Sint dolorum quia ipsa aut et voluptatem eligendi.",
+              "position": 1,
+              "done": false,
+              "deadline": null,
+              "comments-count": 0
+            },
+            "relationships": {
+              "project": {
+                "data": {
+                  "id": "10",
+                  "type": "projects"
+                }
+              },
+              "comments": {
+                "data": [
+
+                ]
+              }
+            },
+            "links": {
+              "self": "http://localhost:3000/api/v1/tasks/4"
+            }
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#position": [
+    {
+      "verb": "PATCH",
+      "path": "/api/v1/tasks/11/position",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "data[attributes][position]=3",
+      "response_data": {
+        "data": {
+          "id": "11",
+          "type": "tasks",
+          "attributes": {
+            "name": "Sunt fuga et odit quis nam quod alias dolor.",
+            "position": 3,
+            "done": false,
+            "deadline": null,
+            "comments-count": 0
+          },
+          "relationships": {
+            "project": {
+              "data": {
+                "id": "16",
+                "type": "projects"
+              }
+            },
+            "comments": {
+              "data": [
+
+              ]
+            }
+          },
+          "links": {
+            "self": "http://localhost:3000/api/v1/tasks/11"
+          }
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/tasks/5",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": {
+          "id": "5",
+          "type": "tasks",
+          "attributes": {
+            "name": "Quibusdam asperiores sed ea unde ducimus voluptatem eligendi.",
+            "position": 1,
+            "done": false,
+            "deadline": null,
+            "comments-count": 0
+          },
+          "relationships": {
+            "project": {
+              "data": {
+                "id": "11",
+                "type": "projects"
+              }
+            },
+            "comments": {
+              "data": [
+
+              ]
+            }
+          },
+          "links": {
+            "self": "http://localhost:3000/api/v1/tasks/5"
+          }
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#update": [
+    {
+      "verb": "PATCH",
+      "path": "/api/v1/tasks/8",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "data[attributes][name]=Update+deadline&data[attributes][position]=5&data[attributes][deadline]=2019-02-12+19%3A00%3A39",
+      "response_data": {
+        "data": {
+          "id": "8",
+          "type": "tasks",
+          "attributes": {
+            "name": "Update deadline",
+            "position": 5,
+            "done": false,
+            "deadline": "2019-02-12T19:00:39.000Z",
+            "comments-count": 0
+          },
+          "relationships": {
+            "project": {
+              "data": {
+                "id": "13",
+                "type": "projects"
+              }
+            },
+            "comments": {
+              "data": [
+
+              ]
+            }
+          },
+          "links": {
+            "self": "http://localhost:3000/api/v1/tasks/8"
+          }
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ]
+}
